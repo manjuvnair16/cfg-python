@@ -1,20 +1,24 @@
 import random
 
-def random_choice():
-    choice_number = random.randint(1, 3)
 
-    if choice_number == 1:
-        choice = 'r'
-    elif choice_number == 2:
-        choice = 's'
-    else:
-        choice = 'p'
+def random_choice():
+    # choice_number = random.randint(1, 3)
+    #
+    # if choice_number == 1:
+    #     choice = 'r'
+    # elif choice_number == 2:
+    #     choice = 's'
+    # else:
+    #     choice = 'p'
+
+    game_list = ['r', 'p', 's']
+    choice = random.choice(game_list)
 
     return choice
 
+
 my_choice = input('Choose rock, scissors or paper - r,s,p : ')
 opponent_choice = random_choice()
-
 print('Your opponent chose {}'.format(opponent_choice))
 
 if my_choice == 'r' and opponent_choice == 's':
@@ -31,4 +35,3 @@ elif my_choice == 'p' and opponent_choice == 's':
     print('You lose!')
 else:
     print('Its a draw')
-
